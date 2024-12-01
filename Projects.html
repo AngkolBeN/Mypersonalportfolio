@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECTS</title>
+  <style>
+    
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+
+    /* Navigation bar */
+    nav {
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparency(255, 255, 255, 0.8); /* Slight transparency */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center; /* Center all content inside nav */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center; /* Center the list items */
+      align-items: center; /* Align items vertically */
+      margin: 0;
+      padding: 0;
+      gap: 20px; /* Add spacing between navigation items */
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00c3ff;
+      border-bottom: 4px solid rgb(154, 152, 252);
+    }
+
+    /* Body styles */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin-top: 60px; /* Space for fixed navbar */
+      background: linear-gradient(135deg, #f4f4f4, #ddd);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Image container */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1vmin;
+      width: 80vw;
+      height: 50vmin;
+      position: relative;
+    }
+
+    .container a {
+      flex: 1; /* Allow links to behave like images */
+      transition: flex 0.5s;
+    }
+
+    .container img {
+      --brightness: 0.75;
+      --grayscale: 1;
+      transition: filter 0.5s;
+      height: 50%;
+      width: 100%;
+      filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .container a:hover {
+      flex: 6;
+    }
+
+    .container img:hover {
+      --brightness: 1.15;
+      --grayscale: 0;
+    }
+    body {
+            margin: 0;
+            background-image: url('about10.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="Resume.html">RESUME</a></li>
+      <li><a href="Projects.html">PROJECTS</a></li>
+      <li><a href="About Me.html">ABOUT ME</a></li>
+    </ul>
+  </nav>
+
+  <!-- Image gallery with links -->
+  <div class="container">
+    <a href="https://github.com/AngkolBeN/PayRoll/tree/master" target="_blank">
+      <img src="11111.png" alt="Project 1">
+    </a>
+    <a href="https://github.com/AngkolBeN/OrderingSystem" target="_blank">
+      <img src="22222.png" alt="Project 2">
+    </a>
+    <a href="https://github.com/AngkolBeN/DivideAndCounquerExample1" target="_blank">
+      <img src="33333.png" alt="Project 3">
+    </a>
+    
+  </div>
+</body>
+</html>
