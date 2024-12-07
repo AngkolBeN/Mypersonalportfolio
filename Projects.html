@@ -5,55 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJECTS</title>
+  
   <style>
-    
     /* Reset styles */
     * {
       margin: 0;
       padding: 0;
+      font-family: sans-serif;
       box-sizing: border-box;
-    }
-    
-
-    /* Navigation bar */
-    nav {
-      padding: 10px 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: transparency(255, 255, 255, 0.8); /* Slight transparency */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: center; /* Center all content inside nav */
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center; /* Center the list items */
-      align-items: center; /* Align items vertically */
-      margin: 0;
-      padding: 0;
-      gap: 20px; /* Add spacing between navigation items */
-    }
-
-    nav ul li {
-      margin: 0;
-    }
-
-    nav ul li a {
-      font-weight: bold;
-      color: #000;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 10px 15px;
-      transition: color 0.3s, border-bottom 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #00c3ff;
-      border-bottom: 4px solid rgb(154, 152, 252);
     }
 
     /* Body styles */
@@ -63,53 +22,122 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      margin-top: 60px; /* Space for fixed navbar */
-      background: linear-gradient(135deg, #f4f4f4, #ddd);
       font-family: Arial, sans-serif;
+      background-image: url('about10.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: center; /* Center text */
+    }
+
+    /* Navigation Bar */
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      line-height: 1.9;
+      z-index: 10; /* Ensure the navbar stays on top */
+      padding: 10px 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #a872c2;
+      border-radius: 20px;
+      transition: color 0.3s, border-bottom 0.3s;
+      
+    }
+
+    nav ul li a:hover {
+      color: #00c3ff;
+      border-bottom: 4px solid rgb(154, 152, 252);
     }
 
     /* Image container */
     .container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1vmin;
-      width: 80vw;
-      height: 50vmin;
-      position: relative;
+      flex-wrap: wrap;
+      justify-content: center; /* Horizontally center */
+      align-items: center; /* Vertically center */
+      gap: 10px; /* Reduced gap for smaller screens */
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 80px; /* Add top margin to avoid overlap with navbar */
     }
 
     .container a {
-      flex: 1; /* Allow links to behave like images */
-      transition: flex 0.5s;
+      flex: 1;
+      min-width: 150px; /* Reduced minimum width */
+      transition: flex 0.5s ease;
     }
 
     .container img {
-      --brightness: 0.75;
-      --grayscale: 1;
-      transition: filter 0.5s;
-      height: 50%;
       width: 100%;
-      filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+      height: auto;
       object-fit: cover;
       cursor: pointer;
+      filter: grayscale(1) brightness(0.75);
+      transition: filter 0.5s ease;
     }
 
     .container a:hover {
-      flex: 6;
+      flex: 1.5; /* Expand on hover */
     }
 
     .container img:hover {
-      --brightness: 1.15;
-      --grayscale: 0;
+      filter: grayscale(0) brightness(1.15);
     }
-    body {
-            margin: 0;
-            background-image: url('about10.gif');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
+
+    /* Responsive Design for smaller screens */
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 15px;
+      }
+
+      .container {
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 10px;
+      }
+
+      nav ul li {
+        margin: 5px 0; /* Reduced margin for mobile */
+      }
+
+      .container a {
+        flex: 1;
+        min-width: 100px; /* Ensure images don't get too small */
+      }
+
+      /* Ensure images take up most of the screen on mobile */
+      .container img {
+        max-width: 90vw;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -134,7 +162,6 @@
     <a href="https://github.com/AngkolBeN/DivideAndCounquerExample1" target="_blank">
       <img src="33333.png" alt="Project 3">
     </a>
-    
   </div>
 </body>
 </html>
